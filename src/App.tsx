@@ -1,5 +1,6 @@
 import React from "react";
 import MyButton from "./component/MyButton";
+import User from "./component/User";
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
         label="My Submit Button"
         onClick={() => console.log("Button is clicked")}
       />
+      <User />
     </>
   );
 };
