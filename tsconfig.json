@@ -2,13 +2,28 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
+    // "target": "ESNext",
+    // "module": "CommonJS",
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*", // Adjust to your project's source files
+    "tests/**/*", // Include test files if outside `src`
+    "jest.config.js" // Ensure Jest config is included
+  ],
+  "exclude": [
+    "node_modules", // Exclude dependencies
+    "dist" // Exclude build output
+  ]
 }
